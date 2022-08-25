@@ -86,7 +86,6 @@ exports.seed = async function(knex) {
       "routes": "10",
       "tag": "",
       "lesson": 1,
-      "stage": ""
     },
     {
       "id": 10,

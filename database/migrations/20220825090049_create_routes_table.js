@@ -4,11 +4,12 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('routes', table => {
-        table.increments();
-        table.integer('lesson_id').unsigned().references('id').inTable('lessons').onDelete('CASCADE');
-        table.string('text', 255).notNullable().unique();
-        table.string('replies', 255).notNullable();
+        table.increments("id");
+        table.integer('lesson').unsigned().references('id').inTable('lessons').onDelete('CASCADE').notNullable()
+        table.string('text', 255).notNullable();
+        table.string('replies', 255);
         table.string('payloads', 255);
+        table.string('routes', 255);
         table.string('tag', 255);
     });
 };

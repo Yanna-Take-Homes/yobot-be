@@ -4,12 +4,13 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('users', table => {
-        table.increments();
+        table.increments("id").primary()
         table.string('username', 255).notNullable().unique();
         table.string('firstName', 255).notNullable();
         table.string('email', 255).notNullable().unique();
         table.string('password', 255).notNullable();
-        table.integer('last_route_id').notNullable().defaultTo(1);
+        table.integer('last_route_id').notNullable().unsigned().defaultTo(1);
+        table.foreign('last_route_id').references('routes.id');
     });
 };
 

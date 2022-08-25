@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('lessons', table => {
-        table.increments();
+        table.increments("id");
         table.string('name', 255).notNullable().unique();
     });
 };
