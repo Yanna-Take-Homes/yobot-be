@@ -11,14 +11,17 @@ server.use('*', cors({
     credentials: true,
 }));
 
-const users = require('./routes/users.js');
 const auth = require('./routes/auth.js');
+const users = require('./routes/users.js');
 const lessons = require('./routes/lessons.js');
+const routes = require('./routes/routes.js');
+const userLessons = require('./routes/user-lessons.js');
 
 server.use('/api/users', users);
 server.use('/api/auth', auth);
 server.use('/api/lessons', lessons);
-
+server.use('/api/routes', routes);
+server.use('/api/user-lessons', userLessons);
 
 server.get('/api', (req, res) => {
     res.status(200).json({message: "API Running!"});
