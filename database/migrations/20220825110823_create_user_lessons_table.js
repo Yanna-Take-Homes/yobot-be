@@ -4,8 +4,11 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('user_lessons', table => {
-        table.integer('lesson_id').unsigned().references('id').inTable('routes').onDelete('CASCADE');
-        table.integer('user_id').unsigned().references('id').inTable('users').onDelete('CASCADE');
+        table.increments("id").primary()
+        table.integer('lesson_id').notNullable().unsigned()
+        table.foreign('lesson_id').references('lessons.id');
+        table.integer('user_id').notNullable().unsigned()
+        table.foreign('user_id').references('users.id');
         table.boolean('completed').notNullable().defaultTo('false');
         table.string('feedback');
         table.integer('rating');
