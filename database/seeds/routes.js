@@ -13,7 +13,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "2",
       "tag": "labels-start",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "3",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 3,
@@ -31,7 +33,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "4",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 4,
@@ -40,7 +43,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "5",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 5,
@@ -49,7 +53,8 @@ exports.seed = async function(knex) {
       "payloads": "yes|no",
       "routes": "6|7",
       "tag": "labels-start",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "7",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 7,
@@ -67,7 +73,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "8",
       "tag": "labels-start",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 8,
@@ -76,7 +83,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "9",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 9,
@@ -85,7 +93,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "10",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 10,
@@ -94,7 +103,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": "11",
       "tag": "labels-endpoint",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 11,
@@ -103,7 +113,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": 12,
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 12,
@@ -112,7 +123,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": 13,
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 13,
@@ -121,7 +133,8 @@ exports.seed = async function(knex) {
       "payloads": "good|bad",
       "routes": "14",
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 14,
@@ -130,7 +143,8 @@ exports.seed = async function(knex) {
       "payloads": "",
       "routes": 15,
       "tag": "",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     },
     {
       "id": 15,
@@ -139,7 +153,8 @@ exports.seed = async function(knex) {
       "payloads": "bye",
       "routes": "",
       "tag": "bye",
-      "lesson": 1,
+      "lesson_id": 1,
+      "lesson_name":"labels",
     }
   ]);
 };

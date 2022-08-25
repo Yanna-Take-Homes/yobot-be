@@ -5,7 +5,10 @@
 exports.up = function(knex) {
     return knex.schema.createTable('routes', table => {
         table.increments("id");
-        table.integer('lesson').unsigned().references('id').inTable('lessons').onDelete('CASCADE').notNullable()
+        table.integer('lesson_id').notNullable().unsigned()
+        table.foreign('lesson_id').references('lessons.id');
+        table.integer('lesson_name').notNullable().unsigned()
+        table.foreign('lesson_name').references('lessons.name');
         table.string('text', 255).notNullable();
         table.string('replies', 255);
         table.string('payloads', 255);

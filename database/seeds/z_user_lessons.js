@@ -9,6 +9,7 @@ exports.seed = async function(knex) {
     {
       id: 1,
       lesson_id: 1,
+      lesson_name: 'labels',
       user_id: 1,
       feedback: 'Great lesson!',
       rating: 5,
