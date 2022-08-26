@@ -17,8 +17,6 @@
 - start application using node: yarn start
 - test the application: yarn test 
 
-- application will be running locally on port 3000. 
-- Ping route: http://localhost:3000/api/ping
-- Posts route: http://localhost:3000/api/posts
+- application will be running locally on port 4000. 
 
 ---
