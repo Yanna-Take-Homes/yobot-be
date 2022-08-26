@@ -8,8 +8,8 @@ const getById = async (id) => {
     return db('users').where({ id: id }).first();
 }
 
-const insert = (user) => {
-    return db('users').insert(user).return(user);
+const insert = async (user) => {
+    await db('users').insert({...user});
 }
 
 module.exports = {

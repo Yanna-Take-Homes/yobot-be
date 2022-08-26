@@ -6,23 +6,22 @@ const users = require('../../database/models/users-model.js');
 const authHelper = require('../middleware/auth-helpers.js');
 
 router.post('/register', async (req, res) => {
-    const credentials = req.body;
-    credentials.password = bcrypt.hashSync(credentials.password, 11);
-
-    try {
-        let insertUser = await users.insert(credentials);
-        const token = authHelper.generateToken(credentials);
-        insertUser = await db('users').where({username: insertUser.username}).select("id", "username", "email", "firstName");
-
+    const newUser = req.body;
+    newUser.password = bcrypt.hashSync(newUser.password, 11);
+    const token = authHelper.generateToken(newUser);
+    await users.insert(newUser).then( async () => {
+        const user = await db('users').where({ username: newUser.username }).first();
         res.status(201).json({
-            message: `Registration successful`,
+            message: 'User created successfully!',
             token,
-            currentUser: insertUser,
+            user
         });
-
-    } catch (err) {
-        res.status(500).json({ message: `Unable to register` });
-    }
+    }).catch(err => {
+        res.status(500).json({
+            message: 'Error creating user',
+            err
+        });
+    });
 });
 
 router.post('/login', async (req, res) => {
@@ -38,7 +37,7 @@ router.post('/login', async (req, res) => {
 
             user = await db('users')
                 .where({ username: credentials.username })
-                .first().select("id", "username", "email", "firstName");
+                .first().select("id", "username", "email", "firstName", "last_route_id");
 
             res.status(200).json({
                 message: `Welcome back ${user.firstName}!`,

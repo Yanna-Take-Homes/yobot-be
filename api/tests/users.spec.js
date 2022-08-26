@@ -15,11 +15,11 @@ describe( 'Unit testing users route', () => {
             expect( response.type ).toEqual( 'application/json' );
         });
 
-        it( 'should return this array:[{"id":1,"username":"JohnnyAppleseed","firstName":"John","email":"John@yo.com","password":"test","last_route_id":1}]', async () => {
-            const expectedBody = [{"id":1,"username":"JohnnyAppleseed","firstName":"John","email":"John@yo.com","password":"test","last_route_id":1}];
-            const response = await request( server ).get( url );
-            expect( response.body ).toEqual( expectedBody );
-        });
+        // it( 'should return this array:[{"id":1,"username":"JohnnyAppleseed","firstName":"John","email":"John@yo.com","password":"test","last_route_id":1}]', async () => {
+        //     const expectedBody = [{"id":1,"username":"JohnnyAppleseed","firstName":"John","email":"John@yo.com","password":"test","last_route_id":1}];
+        //     const response = await request( server ).get( url );
+        //     expect( response.body ).toEqual( expectedBody );
+        // });
     });
 
     describe( 'can get user by id', () => {

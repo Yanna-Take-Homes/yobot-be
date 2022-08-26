@@ -11,6 +11,8 @@ exports.up = function(knex) {
         table.string('password', 255).notNullable();
         table.integer('last_route_id').notNullable().unsigned().defaultTo(1);
         table.foreign('last_route_id').references('routes.id');
+        table.integer('last_lesson_id').notNullable().unsigned().defaultTo(1);
+        table.foreign('last_lesson_id').references('lessons.id');
     });
 };
 

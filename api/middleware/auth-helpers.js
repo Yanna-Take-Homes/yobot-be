@@ -7,10 +7,9 @@ module.exports = {
             password: user.password,
             firstName: user.firstName,
             email: user.email,
-            phone: user.phone,
         };
 
-        const secret = process.env.JWT_SECRET;
+        const secret = process.env.JWT_SECRET || 'secret';
 
         const options = {
             expiresIn: '1d',

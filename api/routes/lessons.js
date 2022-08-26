@@ -3,7 +3,7 @@ const lessons = require('../../database/models/lessons-model.js');
 const authHelper = require('../middleware/auth-helpers.js');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', authHelper.protected, (req, res) => {
     lessons.getAll()
     .then(lessons => {
         res.status(200).json(lessons);
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', authHelper.protected, (req, res) => {
     const { id } = req.params || req.body
     lessons.getById(id)
     .then(lesson => {
