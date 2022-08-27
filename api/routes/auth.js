@@ -42,7 +42,7 @@ router.post('/login', async (req, res) => {
             res.status(200).json({
                 message: `Welcome back ${user.firstName}!`,
                 token,
-                currentUser: user
+                user
             });
         } else {
             res.status(401).json({ message: `Unauthorized credentials` });
