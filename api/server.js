@@ -7,7 +7,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 server.use('*', cors({
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000','https://master--silver-daifuku-e3e572.netlify.app/'],
     credentials: true,
 }));
 
