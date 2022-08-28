@@ -6,8 +6,8 @@ let loginToken;
 beforeEach(async () => {
     const loginUrl = '/api/auth/login';
     await request( server ).post( loginUrl ).send({
-        username: 'test',
-        password: 'test',
+        username: 'yanna',
+        password: 'faith',
     }).then(res => {
         loginToken = res.body.token;
     });
