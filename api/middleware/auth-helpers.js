@@ -9,7 +9,7 @@ module.exports = {
             email: user.email,
         };
 
-        const secret = process.env.JWT_SECRET || 'secret';
+        const secret = process.env.JWT_SECRET;
 
         const options = {
             expiresIn: '1d',
@@ -20,7 +20,7 @@ module.exports = {
 
     protected: (req, res, next) => {
         const token = req.headers.authorization;
-        const secret = process.env.JWT_SECRET || 'secret';
+        const secret = process.env.JWT_SECRET;
 
         if (token) {
             jwt.verify(token, secret, (err, decodedToken) => {
