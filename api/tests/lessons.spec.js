@@ -29,7 +29,7 @@ describe( 'Unit testing lessons route', () => {
             const response = await request( server ).get( `${url}/1` ).set( 'Authorization', `${loginToken}` );
             expect( response.status ).toEqual( 200 );
             expect( response.type ).toEqual( 'application/json' );
-            expect( response.body ).toHaveProperty( 'id', 1 );
+            expect( response.body.id ).toEqual( 1 );
         });
     });
 

@@ -3,7 +3,7 @@ const routes = require('../../database/models/routes-model.js');
 const authHelper = require('../middleware/auth-helpers.js');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', authHelper.protected, (req, res) => {
     routes.getAll()
         .then(routes => {
             res.status(200).json(routes);
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', authHelper.protected, (req, res) => {
     const { id } = req.params || req.body
     routes.getById(id)
         .then(routes => {
@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
         })
 });
 
-router.get('/for-lesson/:lesson_id', (req, res) => {
+router.get('/for-lesson/:lesson_id', authHelper.protected, (req, res) => {
     const { lesson_id } = req.params || req.body
     routes.getAllByLessonId(lesson_id)
         .then(routes => {

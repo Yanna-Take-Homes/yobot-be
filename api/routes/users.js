@@ -3,7 +3,7 @@ const users = require('../../database/models/users-model.js');
 const authHelper = require('../middleware/auth-helpers.js');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', authHelper.protected,(req, res) => {
     users.getAll()
     .then(users => {
         res.status(200).json(users)
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     })
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', authHelper.protected, (req, res) => {
     const { id } = req.params || req.body;
     users.getById(id)
         .then(user => {

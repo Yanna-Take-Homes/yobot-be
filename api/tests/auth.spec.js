@@ -15,7 +15,6 @@ describe( 'Unit testing auth routes', () => {
             expect( response.type ).toEqual( 'application/json' );
             expect( response.status ).toEqual( 200 );
         });
-
     });
 
 });
