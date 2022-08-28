@@ -7,7 +7,7 @@ exports.up = function(knex) {
         table.increments("id").primary()
         table.integer('lesson_id').notNullable().unsigned()
         table.foreign('lesson_id').references('lessons.id');
-        table.integer('lesson_name').notNullable().unsigned()
+        table.string('lesson_name').notNullable().unsigned()
         table.foreign('lesson_name').references('lessons.name');
         table.integer('user_id').notNullable().unsigned()
         table.foreign('user_id').references('users.id');
