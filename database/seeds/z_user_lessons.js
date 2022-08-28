@@ -7,7 +7,6 @@ exports.seed = async function(knex) {
   await knex('user_lessons').del()
   await knex('user_lessons').insert([
     {
-      id: 1,
       lesson_id: 1,
       lesson_name: 'labels',
       user_id: 1,

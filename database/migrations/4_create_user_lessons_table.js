@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
     return knex.schema.createTable('user_lessons', table => {
-        table.increments("id").primary()
+        table.increments("id").primary();
         table.integer('lesson_id').notNullable().unsigned()
         table.foreign('lesson_id').references('lessons.id');
         table.string('lesson_name').notNullable().unsigned()

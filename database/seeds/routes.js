@@ -7,7 +7,6 @@ exports.seed = async function(knex) {
   await knex('routes').del()
   await knex('routes').insert([
     {
-      "id": 1,
       "text": "Can I tell you something?",
       "replies": "sure",
       "payloads": "",
@@ -17,7 +16,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 2,
       "text": "I saw this the other day|img:badrobot.png|and it made me sad 😔",
       "replies": "oh no Woebot",
       "payloads": "",
@@ -27,7 +25,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 3,
       "text": "I know|But it also got me thinking",
       "replies": "about what",
       "payloads": "",
@@ -37,7 +34,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 4,
       "text": "about labels...  🏷️ |you know like, \"good\" or \"bad\" |or the really mean ones like \"idiot\", \"worthless, or \"loser\" |sometimes good ones too, like \"smart\" or \"successful\"..",
       "replies": "what about them",
       "payloads": "",
@@ -47,7 +43,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 5,
       "text": "I wonder, do you ever label yourself things?",
       "replies": "all the time 🏷️|never",
       "payloads": "yes|no",
@@ -57,7 +52,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 6,
       "text": "What kind of labels do you use to describe yourself? Write them here ✏️",
       "replies": "",
       "payloads": "",
@@ -67,7 +61,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 7,
       "text": "Thanks for your honesty 🌟🌟🌟",
       "replies": "You're welcome",
       "payloads": "",
@@ -77,7 +70,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 8,
       "text": "not to mention your insight 💡",
       "replies": "thanks Woebot",
       "payloads": "",
@@ -87,7 +79,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 9,
       "text": "do you ever label other people, or other things like your work or stuff in the world?",
       "replies": "I guess so",
       "payloads": "",
@@ -97,7 +88,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 10,
       "text": "write them here: ✏️",
       "replies": "",
       "payloads": "",
@@ -117,7 +107,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 12,
       "text": "You're welcome|tomorrow I'm going to tell you what 20 yrs of science has shown us about how these 🏷️ (good AND bad) affect us ",
       "replies": "Ok",
       "payloads": "",
@@ -127,7 +116,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 13,
       "text": "img:just_breath.jpg|but in the meantime don't forget to 👆",
       "replies": "👍|👎",
       "payloads": "good|bad",
@@ -137,7 +125,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 14,
       "text": "Let's pick up this chat again tomorrow",
       "replies": "sounds good",
       "payloads": "",
@@ -147,7 +134,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 15,
       "text": "Bye",
       "replies": "bye",
       "payloads": "bye",
