@@ -2,6 +2,33 @@
 
 https://yanna-yobot.herokuapp.com/api
 
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn`
+
+Installs all the dependencies needed into node_modules folder
+
+### `yarn migrate`
+
+creates the development database and all tables using knex
+
+### `yarn seed`
+
+seeds the development database with mvp/mock data
+
+### `yarn dev`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:4000/api](http://localhost:4000/api) to view it in the browser.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br>
+
+
 # AUTH ROUTES
 
 ## **REGISTER**
