@@ -97,7 +97,6 @@ exports.seed = async function(knex) {
       "lesson_name":"labels",
     },
     {
-      "id": 11,
       "text": "great insight 🌟🌟🌟",
       "replies": "thank you",
       "payloads": "",
